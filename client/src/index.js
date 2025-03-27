@@ -1,6 +1,7 @@
 import { h } from 'preact';
 import register from 'preact-custom-element';
 import LoginForm from './components/LoginForm';
+import MenuForm from './components/MenuForm';
 import PocketBase from 'pocketbase';
 
 window.pb = new PocketBase();
@@ -25,3 +26,6 @@ refreshAuth();
 
 // Register LoginForm as a Web Component <login-form>
 register(LoginForm, 'login-form', ['label']);
+
+// Register MenuForm as a Web Component <menu-form>
+register(MenuForm, 'menu-form', ['label']);
