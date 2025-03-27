@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    src: url('/assets/fonts/Poppins.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Benditos';
+    src: url('/assets/fonts/TAYBenditos.woff') format('woff');
+}
+
+:root {
+    --color-base-100: #f6e8de;
+    --color-base-200: #f6e8de;
+    --color-base-300: #f6e8de;
+    --color-base-content: #cc3300;
+    --color-primary: #cc3300;
+    --color-primary-content: #f6e8de;
+    --color-secondary: #cc3300;
+    --color-secondary-content: #f6e8de;
+    --color-accent: #cc3300;
+    --color-accent-content: #f6e8de;
+    --color-neutral: #cc3300;
+    --color-neutral-content: #f6e8de;
+    --color-info: #cc3300;
+    --color-info-content: #f6e8de;
+    --color-success: #cc3300;
+    --color-success-content: #f6e8de;
+    --color-warning: #cc3300;
+    --color-warning-content: #f6e8de;
+    --color-error: #cc3300;
+    --color-error-content: #f6e8de;
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 2rem;
+    --size-selector: 0.25rem;
+    --size-field: 0.25rem;
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+    --font-sans: 'Poppins', sans-serif;
+    --heading-font-family: 'Benditos', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--heading-font-family);
+}
+  

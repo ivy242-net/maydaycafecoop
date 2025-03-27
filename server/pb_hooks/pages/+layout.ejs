@@ -6,10 +6,11 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0/themes.css" rel="stylesheet" type="text/css" />
+    <link href="<%= asset('assets/style.css') %>" rel="stylesheet" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
-<body class="flex flex-col min-h-screen">
-    <header class="navbar bg-base-100 shadow-sm">
+<body class="flex flex-col items-center min-h-screen">
+    <header class="navbar bg-base-100 lg:w-80/100 lg:max-w-340 w-90/100 max-w-360">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -29,35 +30,35 @@
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <a class="btn btn-ghost text-xl" href="<%= $app.settings().meta.appURL %>"><%= $app.settings().meta.appName %></a>
-        </div>
-        <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
-            <li><a>Item 1</a></li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </details>
-            </li>
-            <li><a>Item 3</a></li>
+          <ul class="menu menu-horizontal hidden lg:flex px-1 text-4xl font-heading">
+            <li><a class="pt-3" href="/about">About</a></li>
+            <li><a class="pt-3" href="/contact">Contact</a></li>
+            <li><a class="pt-3" href="/wholesale">Wholesale</a></li>
           </ul>
         </div>
+        <div class="navbar-center flex">
+          <a href="/">
+            <img src="<%= asset('assets/images/circlelogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
+          </a>
+        </div>
         <div class="navbar-end">
-          <a class="btn btn-primary" href="/login">Login</a>
+          <ul class="menu menu-horizontal px-1 hidden lg:flex text-4xl font-heading">
+            <li><a class="pt-3" href="/#menu">Menu</a></li>
+            <li><a class="pt-3" href="/#specials">Specials</a></li>
+          </ul>
+          <a class="btn btn-primary btn-lg rounded-box text-4xl pt-1 font-heading" href="/login">Donate</a>
         </div>
     </header>
-    <main class="flex flex-col flex-1">
+    <main class="flex flex-col flex-1 rounded-box border-y py-4 w-90/100 max-w-360">
     <%- slot %>
     </main>
-    <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content items-center p-4">
-        <aside class="grid-flow-col items-center">
-          <p><%= $app.settings().meta.appName %> | Copyright ©<%= new Date().getFullYear() %> - All right reserved.</p>
+    <footer class="footer sm:footer-horizontal items-center p-4 w-980/100 max-w-340 -translate-y-12">
+        <aside class="grid-flow-col items-center bg-base-100 px-4">
+          <a href="/">
+            <img src="<%= asset('assets/images/horizontallogo.png') %>" alt="<%= $app.settings().meta.appName %> Logo" class="w-60">
+          </a>        
         </aside>
-        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+        <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end bg-base-100 px-4">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
