@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body class="flex flex-col items-center min-h-screen">
-    <header class="navbar bg-base-100 lg:w-80/100 lg:max-w-340 w-90/100 max-w-360">
+    <header class="navbar bg-base-100 lg:w-80/100 lg:max-w-340 w-90/100 max-w-360 items-end">
         <div class="navbar-start">
           <div class="dropdown">
             <div tabindex="0" role="button" class="lg:hidden">
@@ -23,23 +23,23 @@
               <li><a>Item 3</a></li>
             </ul>
           </div>
-          <ul class="menu menu-horizontal hidden lg:flex px-1 text-4xl font-heading">
+          <ul class="menu menu-horizontal hidden lg:flex flex-1 justify-around px-1 text-4xl font-heading">
             <li><a class="pt-4" href="/about">About</a></li>
             <li><a class="pt-4" href="/contact">Contact</a></li>
-            <li><a class="pt-4" href="/wholesale">Wholesale</a></li>
+            <li><a class="pt-4" href="/events">Events</a></li>
           </ul>
         </div>
         <div class="navbar-center flex">
           <a href="/">
-            <img src="<%= asset('assets/images/circlelogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="hidden lg:block h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
-            <img src="<%= asset('assets/images/smalllogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="lg:hidden h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
+            <img src="<%= asset('assets/images/circlelogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="hidden lg:block h-40 px-3 -mb-8 bg-base-100 translate-y-2">
+            <img src="<%= asset('assets/images/smalllogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="lg:hidden h-20 px-3 -mb-8 bg-base-100 translate-y-2">
           </a>
         </div>
         <div class="navbar-end">
-          <ul class="menu menu-horizontal px-1 hidden lg:flex text-4xl font-heading">
+          <ul class="menu menu-horizontal px-1 hidden lg:flex flex-1 justify-around text-4xl font-heading">
             <li><a class="pt-4" href="/#menu">Menu & Specials</a></li>
           </ul>
-          <a class="btn btn-primary btn-lg rounded-box text-4xl pt-1.5 font-heading hidden lg:block" href="/donate">Donate</a>
+          <a class="btn btn-primary btn-lg rounded-box text-4xl pt-1.5 font-heading hidden lg:block" href="/support">Support us!</a>
           <a class="text-4xl pt-1 font-heading lg:hidden" href="/#">Menu</a>
         </div>
     </header>
