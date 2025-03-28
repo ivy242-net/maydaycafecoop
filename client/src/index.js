@@ -2,6 +2,7 @@ import { h } from 'preact';
 import register from 'preact-custom-element';
 import LoginForm from './components/LoginForm';
 import MenuForm from './components/MenuForm';
+import LibraryGallery from './components/LibraryGallery';
 import PocketBase from 'pocketbase';
 
 window.pb = new PocketBase();
@@ -29,3 +30,6 @@ register(LoginForm, 'login-form', ['label']);
 
 // Register MenuForm as a Web Component <menu-form>
 register(MenuForm, 'menu-form', ['label']);
+
+// Register LibraryGallery as a Web Component <menu-form>
+register(LibraryGallery, 'library-gallery', ['label']);

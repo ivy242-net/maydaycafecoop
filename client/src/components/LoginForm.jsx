@@ -13,7 +13,7 @@ function LoginForm({ label }) {
                 'editor@ivy242.net',
                 password,
             );
-            window.location.href = '/dashboard';
+            window.location.href = '/post';
         } catch (err) {
             setError(err.message);
         }

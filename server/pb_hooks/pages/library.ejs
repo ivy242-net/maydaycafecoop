@@ -1,0 +1,8 @@
+<h1>Library</h1>
+<% if (request.auth) { %>
+
+    <library-gallery></library-gallery>
+  
+  <% } else { %>
+    <p>Please <a href="/login">log in</a>.</p>
+  <% } %>

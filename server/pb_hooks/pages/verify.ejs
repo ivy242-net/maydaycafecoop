@@ -8,7 +8,7 @@
             try {
                 const authData = await pb.collection('users').authWithOTP(otpId, otp);
                 // Redirect to dashboard page
-                window.location.href = '/dashboard';
+                window.location.href = '/post';
             } catch (err) {
                 // Redirect to login page with error message in query string
                 window.location.href = `/login?error=${err.message}`;
