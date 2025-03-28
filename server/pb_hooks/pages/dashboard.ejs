@@ -1,12 +1,5 @@
-<h1>Dashboard</h1>
+<h1>Assign Weekly Special</h1>
 <% if (request.auth) { %>
-    <!-- Using Record methods -->
-    <p>Welcome, <%= request.auth.get('email') %></p>
-  
-    <!-- Check verification status -->
-    <% if (request.auth.verified()) { %>
-      <p>✓ Verified account</p>
-    <% } %>
 
     <menu-form></menu-form>
   
