@@ -8,7 +8,7 @@ onRecordAuthRequest((e) => {
             path: '/',
             maxAge: 60 * 60 * 24 * 30,
             secure: appUrl?.startsWith('https://') ? true : false,
-            httpOnly: true,
+            httpOnly: false,
             sameSite: true,
         });
     } catch (err) {
@@ -29,7 +29,7 @@ routerAdd("GET", "/logout", (e) => {
             path: '/',
             maxAge: 0,
             secure: appUrl?.startsWith('https://') ? true : false,
-            httpOnly: true,
+            httpOnly: false,
             sameSite: true
         });
         e.redirect(302, '/login');
