@@ -13,40 +13,34 @@
     <header class="navbar bg-base-100 lg:w-80/100 lg:max-w-340 w-90/100 max-w-360">
         <div class="navbar-start">
           <div class="dropdown">
-            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+            <div tabindex="0" role="button" class="lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
             </div>
             <ul
               tabindex="0"
               class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li><a>Item 1</a></li>
-              <li>
-                <a>Parent</a>
-                <ul class="p-2">
-                  <li><a>Submenu 1</a></li>
-                  <li><a>Submenu 2</a></li>
-                </ul>
-              </li>
               <li><a>Item 3</a></li>
             </ul>
           </div>
           <ul class="menu menu-horizontal hidden lg:flex px-1 text-4xl font-heading">
-            <li><a class="pt-3" href="/about">About</a></li>
-            <li><a class="pt-3" href="/contact">Contact</a></li>
-            <li><a class="pt-3" href="/wholesale">Wholesale</a></li>
+            <li><a class="pt-4" href="/about">About</a></li>
+            <li><a class="pt-4" href="/contact">Contact</a></li>
+            <li><a class="pt-4" href="/wholesale">Wholesale</a></li>
           </ul>
         </div>
         <div class="navbar-center flex">
           <a href="/">
-            <img src="<%= asset('assets/images/circlelogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
+            <img src="<%= asset('assets/images/circlelogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="hidden lg:block h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
+            <img src="<%= asset('assets/images/smalllogo.svg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="lg:hidden h-20 lg:h-30 px-3 -mb-8 bg-base-100 translate-y-2">
           </a>
         </div>
         <div class="navbar-end">
           <ul class="menu menu-horizontal px-1 hidden lg:flex text-4xl font-heading">
-            <li><a class="pt-3" href="/#menu">Menu</a></li>
-            <li><a class="pt-3" href="/#specials">Specials</a></li>
+            <li><a class="pt-4" href="/#menu">Menu & Specials</a></li>
           </ul>
-          <a class="btn btn-primary btn-lg rounded-box text-4xl pt-1 font-heading" href="/login">Donate</a>
+          <a class="btn btn-primary btn-lg rounded-box text-4xl pt-1.5 font-heading hidden lg:block" href="/donate">Donate</a>
+          <a class="text-4xl pt-1 font-heading lg:hidden" href="/#">Menu</a>
         </div>
     </header>
     <main class="flex flex-col flex-1 rounded-box border-y py-8 px-8 w-90/100 max-w-360">
