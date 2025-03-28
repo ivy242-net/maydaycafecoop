@@ -42,28 +42,37 @@ function MenuForm({ label }) {
             {error && <div>{error}</div>}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <fieldset class="fieldset">
-                    <label class="fieldset-label">What kind of special is it?</label>
+                    <legend class="fieldset-legend">What kind of special is it?</legend>
                     <select name="menu-type" class="select" id="menu-type-select" required onChange={(e) => setMenuType(e.target.value)}>
                         <option value="kitchen">Kitchen</option>
                         <option value="bakery">Bakery</option>
                         <option value="drinks">Drink</option>
                     </select>
-                    <fieldset class="fieldset">
-                        <input type="checkbox" id="vegan-checkbox" class="checkbox" name="vegan-checkbox" onChange={(e) => setIsVegan(e.srcElement.checked)} />
-                        <label for="vegan-checkbox" class="fieldset-label">Vegan?</label>
-
-                        <input type="checkbox" id="glutenfree-checkbox" class="checkbox" name="glutenfree-checkbox" onChange={(e) => { setIsGlutenFree(e.srcElement.checked)}} />
-                        <label for="glutenfree-checkbox" class="fieldset-label">Gluten Free?</label>
-                    </fieldset>
-
-                    <label class="fieldset-label">What's the special?</label>
-                    <textarea placeholder="Type here" class="textarea" required onChange={(e) => setMenuContent(e.target.value)} />
-
-                    <label for="media">Upload an image of your special:</label>
-                    <input type="file" id="media" name="media" accept="image/png, image/jpeg" class="file-input" onChange={(e) => setImage(e.target.files[0]) } />
-
-                    <button type="submit" class="btn btn-neutral mt-4">Submit</button>
                 </fieldset>
+
+                <fieldset class="fieldset bg-base-100 border border-base-300 rounded-box w-64">
+                    <legend class="fieldset-legend">Dietary Restrictions</legend>
+                    <label class="fieldset-label">
+                        <input type="checkbox" id="vegan-checkbox" class="checkbox" name="vegan-checkbox" onChange={(e) => setIsVegan(e.srcElement.checked)} />
+                        Vegan?
+                        <input type="checkbox" id="glutenfree-checkbox" class="checkbox" name="glutenfree-checkbox" onChange={(e) => { setIsGlutenFree(e.srcElement.checked)}} />
+                        Gluten Free?
+                    </label>
+                </fieldset>
+
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">What's the special?</legend>
+                    <textarea class="textarea h-24" placeholder="A little description about your special" required onChange={(e) => setMenuContent(e.target.value)}></textarea>
+                    <div class="fieldset-label">Required</div>
+                </fieldset>
+
+                <fieldset class="fieldset">
+                    <legend class="fieldset-legend">Upload an image of your special</legend>
+                    <input type="file" class="file-input" onChange={(e) => setImage(e.target.files[0]) } />
+                    <label for="media" class="fieldset-label">Max size 5MB</label>
+                </fieldset>
+
+                <button type="submit" class="btn btn-neutral mt-4">Submit</button>
             </form>
         </>
     )
