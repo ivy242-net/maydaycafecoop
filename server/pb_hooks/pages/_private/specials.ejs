@@ -1,0 +1,71 @@
+<%
+    // Get timestamp for one week ago
+    const oneWeekAgo = new Date();
+    oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
+    const oneWeekAgoTimestamp = Math.floor(oneWeekAgo.getTime() / 1000);
+
+    let kitchenSpecial = $app.findFirstRecordByFilter(
+        "specials",
+        `created >= ${oneWeekAgoTimestamp} && type = 'kitchen'`,
+    );
+
+    let bakerySpecial = $app.findFirstRecordByFilter(
+        "specials",
+        `created >= ${oneWeekAgoTimestamp} && type = 'bakery'`,
+    );
+
+    let drinkSpecial = $app.findFirstRecordByFilter(
+        "specials",
+        `created >= ${oneWeekAgoTimestamp} && type = 'drink'`,
+    );
+
+    const getMediaURL = (record, index = 0) => {
+        if (!record || !record.get('media') || record.get('media').length === 0) {
+            return null;
+        }
+        const appUrl = $app.settings().meta.appURL;
+        const fileName = record.get('media')[index];
+        if (!fileName) {
+            return null;
+        }
+        return `${appUrl}/api/files/specials/${record.get('id')}/${fileName}`;
+    };
+
+%>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-1/1">
+
+    <% if (kitchenSpecial) { %>
+        <div class="flex flex-col">
+            <% if (getMediaURL(kitchenSpecial)) { %>
+                <img src="<%= getMediaURL(kitchenSpecial) %>" alt="Kitchen Special" class="w-1/1 aspect-1/1 rounded-box shadow lg:-translate-y-5 lg:-translate-x-2 lg:-rotate-2">
+            <% } %>
+            <div class="p-4 text-xl">
+                <%- kitchenSpecial.get('content') %>
+            </div>
+        </div>
+    <% } %>
+
+    <% if (bakerySpecial) { %>
+        <div class="flex flex-col">
+            <% if (getMediaURL(bakerySpecial)) { %>
+                <img src="<%= getMediaURL(bakerySpecial) %>" alt="Bakery Special" class="w-1/1 aspect-1/1 rounded-box shadow lg:rotate-1">
+            <% } %>
+            <div class="p-4 text-xl">
+                <%- bakerySpecial.get('content') %>
+            </div>
+        </div>
+    <% } %>
+
+    <% if (drinkSpecial) { %>
+        <div class="flex flex-col">
+            <% if (getMediaURL(drinkSpecial)) { %>
+                <img src="<%= getMediaURL(drinkSpecial) %>" alt="Drink Special" class="w-1/1 aspect-1/1 rounded-box shadow lg:-rotate-1 lg:-translate-x-1 lg:-translate-y-3">
+            <% } %>
+            <div class="p-4 text-xl">
+                <%- drinkSpecial.get('content') %>
+            </div>
+        </div>
+    <% } %>
+
+</div>

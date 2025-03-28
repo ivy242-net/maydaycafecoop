@@ -1,13 +1,7 @@
-<h1 class="text-6xl text-center mt-12">Open 7 Days a week - 7:00AM to 4:30PM</h1>
-<div class="divider"></div>
-<div class="hero flex-1">
-  <div class="hero-content flex">
-    <img src="<%= asset('assets/images/illustration.jpg') %>" alt="<%= $app.settings().meta.appName %> Logo" class="w-3/5">
-    <div class="w-2/5 flex flex-col items-center">
-      <h1 class="text-4xl">May Day Cafe Coop</h1>
-    </div>
-  </div>
+<h1 class="text-6xl text-center mt-10">Open 7 Days a week - 7:00AM to 4:30PM</h1>
+<div class="divider my-12">
+  <div class="font-heading text-4xl">Try our weekly specials!</div>
 </div>
-<div class="divider mt-12">
-  <div class="text-5xl font-heading">Menu & Specials</div>
+<div class="w-1/1">
+  <%- include('specials.ejs') %>
 </div>
