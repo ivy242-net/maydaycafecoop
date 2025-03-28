@@ -6,25 +6,31 @@ function MenuForm({ label }) {
     const [isVegan, setIsVegan] = useState('');
     const [isGlutenFree, setIsGlutenFree] = useState('');
     const [menuContent, setMenuContent] = useState('');
+    const [image, setImage] = useState('');
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        console.log(image)
         try {
             let dataToSend = {
                 "type": menuType,
                 "content": menuContent,
                 "is_vegan": isVegan,
-                "is_glutenfree": isGlutenFree
+                "is_glutenfree": isGlutenFree,
+                "media": image
             }
 
+            // Make sure we can get the user data before trying to send it
             if (pb.authStore?.model?.id) {
                 dataToSend['author'] = pb.authStore.model.id
             }
 
-            console.log(dataToSend)
-
             const menuData = await pb.collection('specials').create(dataToSend)
+
+            // Success needs to looks like success, for now, we can redirect to the homepage because the menu will be there
+            window.location.href = '/';
 
         } catch (err) {
             setError(err.message);
@@ -52,6 +58,10 @@ function MenuForm({ label }) {
 
                     <label class="fieldset-label">What's the special?</label>
                     <textarea placeholder="Type here" class="textarea" required onChange={(e) => setMenuContent(e.target.value)} />
+
+                    <label for="media">Upload an image of your special:</label>
+                    <input type="file" id="media" name="media" accept="image/png, image/jpeg" class="file-input" onChange={(e) => setImage(e.target.files[0]) } />
+
                     <button type="submit" class="btn btn-neutral mt-4">Submit</button>
                 </fieldset>
             </form>
