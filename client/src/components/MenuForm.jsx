@@ -6,26 +6,25 @@ function MenuForm({ label }) {
     const [isVegan, setIsVegan] = useState('');
     const [isGlutenFree, setIsGlutenFree] = useState('');
     const [menuContent, setMenuContent] = useState('');
-    const [date, setDate] = useState('');
     const [error, setError] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            console.log(menuType)
-            console.log(menuContent)
-            console.log(isVegan)
-            console.log(isGlutenFree)
-
-            const menuData = await pb.collection('specials').create({
+            let dataToSend = {
                 "type": menuType,
                 "content": menuContent,
                 "is_vegan": isVegan,
-                "is_glutenfree": isGlutenFree, 
-                "author": '1'
-            })
+                "is_glutenfree": isGlutenFree
+            }
 
-            console.log('menudata ', menuData)
+            if (pb.authStore?.model?.id) {
+                dataToSend['author'] = pb.authStore.model.id
+            }
+
+            console.log(dataToSend)
+
+            const menuData = await pb.collection('specials').create(dataToSend)
 
         } catch (err) {
             setError(err.message);
