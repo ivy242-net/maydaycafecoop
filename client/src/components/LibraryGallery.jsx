@@ -25,8 +25,9 @@ function LibraryGallery({ label }) {
   
     return data && (
         <>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-1/1">
             {data.map((special) => 
-            <div class="card bg-base-100 w-96 mt-5 shadow-sm">
+            <div class="flex flex-col lg:-translate-y-5 lg:-translate-x-2 card bg-base-100 w-96 mt-5 shadow-sm">
             <figure>
               <img
                 src={special['imageUrl']}
@@ -40,6 +41,7 @@ function LibraryGallery({ label }) {
             </div>
           </div>
             )}
+        </div>
         </>
     )
 }
