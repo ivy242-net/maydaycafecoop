@@ -4,24 +4,46 @@
     oneWeekAgo.setDate(oneWeekAgo.getDate() - 7);
     const oneWeekAgoTimestamp = Math.floor(oneWeekAgo.getTime() / 1000);
 
-    let kitchenSpecials = $app.findRecordsByFilter(
-        "specials",
-        `created >= ${oneWeekAgoTimestamp} && type = 'kitchen'`,
-        "-created",                                   // sort
-        1,                                            // limit
-        0,                                             // offset
-    );
-    let kitchenSpecial = kitchenSpecials.length > 0 ? kitchenSpecials[0] : null;
+    let kitchenSpecial, bakerySpecial, drinkSpecial;
 
-    let bakerySpecial = $app.findFirstRecordByFilter(
-        "specials",
-        `created >= ${oneWeekAgoTimestamp} && type = 'bakery'`,
-    );
+    try {
+        let kitchenSpecials = $app.findRecordsByFilter(
+            "specials",
+            `created >= ${oneWeekAgoTimestamp} && type = 'kitchen'`,
+            "-created",                                   // sort
+            1,                                            // limit
+            0,                                             // offset
+        );
+        kitchenSpecial = kitchenSpecials.length > 0 ? kitchenSpecials[0] : null;
+    } catch (err) {
+        kitchenSpecial = null;
+    }
 
-    let drinkSpecial = $app.findFirstRecordByFilter(
-        "specials",
-        `created >= ${oneWeekAgoTimestamp} && type = 'drink'`,
-    );
+    try {
+        let bakerySpecials = $app.findRecordsByFilter(
+            "specials",
+            `created >= ${oneWeekAgoTimestamp} && type = 'bakery'`,
+            "-created",                                   // sort
+            1,                                            // limit
+            0,                                             // offset
+        );
+        bakerySpecial = bakerySpecials.length > 0 ? bakerySpecials[0] : null;
+    } catch (err) {
+        bakerySpecial = null;
+    }
+
+    try {
+        let drinkSpecials = $app.findRecordsByFilter(
+            "specials",
+            `created >= ${oneWeekAgoTimestamp} && type = 'drink'`,
+            "-created",                                   // sort
+            1,                                            // limit
+            0,                                             // offset
+        );
+        drinkSpecial = drinkSpecials.length > 0 ? drinkSpecials[0] : null;
+    } catch(err) {
+        drinkSpecial = null;
+    }
 
     const getMediaURL = (record, index = 0) => {
         if (!record || !record.get('media') || record.get('media').length === 0) {

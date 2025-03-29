@@ -46,7 +46,7 @@ function MenuForm({ label }) {
                     <select name="menu-type" class="select" id="menu-type-select" required onChange={(e) => setMenuType(e.target.value)}>
                         <option value="kitchen">Kitchen</option>
                         <option value="bakery">Bakery</option>
-                        <option value="drinks">Drink</option>
+                        <option value="drink">Drink</option>
                     </select>
                 </fieldset>
 
