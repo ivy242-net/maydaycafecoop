@@ -28,12 +28,15 @@ function LibraryGallery({ label }) {
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-1/1">
             {data.map((special) => 
             <div class="flex flex-col lg:-translate-y-5 lg:-translate-x-2 card bg-base-100 w-96 mt-5 shadow-sm">
+            { special['media'].length > 0 &&
             <figure>
               <img
                 src={special['imageUrl']}
                 alt={special['content']} />
             </figure>
+            }
             <div class="card-body">
+                <h2 class="card-title">{special['type']}</h2>
               <p>{special['content']}</p>
               <div class="card-actions justify-end">
                 {/* <a href="#" class="btn btn-primary" id="btn-download" download={special['imageUrl']}>Save Image</a> */}
