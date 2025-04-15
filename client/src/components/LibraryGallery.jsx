@@ -8,7 +8,8 @@ function LibraryGallery({ label }) {
 
     useEffect(() => {
       const getData = async () => {
-        let data = await pb.collection('specials').getFullList(200)
+        let data = await pb.collection('specials').getList(1, 50)
+        console.log(data)
         data.forEach(async (record) => {
             record['imageUrl'] = pb.files.getURL(record, record['media']);
 
