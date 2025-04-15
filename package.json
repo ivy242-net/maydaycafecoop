@@ -13,6 +13,6 @@
   "workspaces": ["client", "server", "scripts"],
   "author": "contact@ivy242.net",
   "bin": "scripts/bin.js",
-  "license": "ISC",
+  "license": "GPL",
   "description": ""
 }

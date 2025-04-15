@@ -3,7 +3,7 @@
     "version": "0.0.5",
     "main": "index.js",
     "author": "",
-    "license": "ISC",
+    "license": "GPL",
     "description": "",
     "dependencies": {
       "pocketpages": "^0.15.5"
