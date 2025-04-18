@@ -5,6 +5,9 @@ export default defineConfig({
   plugins: [
     preact(),
   ],
+  define: {
+    'process.env': {}
+  },
   build: {
     outDir: 'dist',
     lib: {
