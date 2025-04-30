@@ -5,106 +5,159 @@
 <div class="w-1/1">
   <%- include('specials.ejs') %>
 </div>
-<!-- Coffee Grid -->
+
+<!-- Grid for Tables -->
 <div class="grid grid-cols-1 md:grid-cols-3">
-  <div class="grid grid-cols-5 col-span-2 row-span-3 pb-6">
-    <h2 class="text-6xl pl-0 col-span-full">Coffee</h2>
-    <p class="col-span-full">Fair Trade · Organic</p>
-    <ul class="col-span-2">
-      <li>Espresso</li>
-      <li>Americano</li>
-      <li>Depth Charge</li>
-      <li>Cappucino</li>
-      <li>Latte</li>
-      <li>Breve</li>
-      <li>Mocha</li>
-      <li>Caramel Latte</li>
-      <li>Miel</li>
-      <li>Vietnamese</li>
-      <li>Chai Tea</li>
-      <li>Cold Press</li>
-      <li>Hot Chocolate / Steamer</li>
-      <li>Cortado</li>
-    </ul>
-    <!-- small prices -->
-    <ul class="col-span-1">
-      <li>2.75</li>
-      <li>2.75</li>
-      <li>3.50</li>
-      <li>4.25</li>
-      <li>4.00</li>
-      <li>4.50</li>
-      <li>4.50</li>
-      <li>4.50</li>
-      <li>4.25</li>
-      <li>4.50</li>
-
-      <li>4.50</li>
-      <li>4.50</li>
-      <li>3.00</li>
-    </ul>
-    <!-- medium prices -->
-    <ul class="col-span-1">
-      <li>3.25</li>
-      <li>3.25</li>
-      <li>4.00</li>
-      <li>4.75</li>
-      <li>4.25</li>
-      <li>5.00</li>
-      <li>5.00</li>
-      <li>5.00</li>
-      <li>4.75</li>
-      <li>5.00</li>
-
-      <li>4.25</li>
-      <li>5.00</li>
-      <li>3.50</li>
-    </ul>
-    <!-- large prices -->
-    <ul class="col-span-1">
-      <li>3.75</li>
-      <li>3.75</li>
-      <li>4.00</li>
-      <li>5.25</li>
-      <li>4.75</li>
-      <li>5.50</li>
-      <li>5.50</li>
-      <li>5.50</li>
-      <li>5.25</li>
-      <li>5.50</li>
-
-      <li>4.75</li>
-      <li>5.50</li>
-      <li>4.00</li>
-    </ul>
-  </div>
-  <!-- Drink Sizes -->
-  <div class="grid grid-cols-3 col-span-1 pb-6">
-    <h3 class="text-3xl pl-0 col-span-full">Drink Sizes</h3>
-    <p class="text-3xl">12</p>
-    <p class="text-3xl">16</p>
-    <p class="text-3xl">20</p>
-    <p>oz</p>
-    <p>oz</p>
-    <p>oz</p>
-    <p>Small</p>
-    <p>Medium</p>
-    <p>Large</p>
-    <p class="text-xl">Hot</p>
-    <p>or</p>
-    <p class="text-xl">Iced</p>
-  </div>
+  <!-- Coffee -->
+  <table class="text-left col-span-2 row-span-2 mb-6 mr-6">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h2 class="text-6xl">Coffee</h2></th>
+      </tr>
+      <tr>
+        <th>Fair Trade · Organic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Espresso</th>
+        <td>2.75</td>
+        <td>3.25</td>
+        <td>3.75</td>
+      </tr>
+      <tr>
+        <th>Americano</th>
+        <td>2.75</td>
+        <td>3.25</td>
+        <td>3.75</td>
+      </tr>
+      <tr>
+        <th>Depth Charge</th>
+        <td>3.50</td>
+        <td>4.00</td>
+        <td>4.00</td>
+      </tr>
+      <tr>
+        <th>Cappucino</th>
+        <td>4.25</td>
+        <td>4.75</td>
+        <td>5.25</td>
+      </tr>
+      <tr>
+        <th>Latte</th>
+        <td>4.00</td>
+        <td>4.25</td>
+        <td>4.75</td>
+      </tr>
+      <tr>
+        <th>Breve</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Mocha</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Caramel Latte</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Miel</th>
+        <td>4.25</td>
+        <td>4.75</td>
+        <td>5.25</td>
+      </tr>
+      <tr>
+        <th>Vietnamese</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Chai Tea</th>
+        <td>4.50</td>
+        <td>4.25</td>
+        <td>4.75</td>
+      </tr>
+      <tr>
+        <th>Cold Press</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Hot Chocolate / Steamer</th>
+        <td>3.00</td>
+        <td>3.50</td>
+        <td>4.00</td>
+      </tr>
+      <tr>
+        <th>Cortado</th>
+      </tr>
+    </tbody>
+  </table>
+  <!-- Drink sizes -->
+  <table class="text-left col-span-2 md:col-span-1 mb-6">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-3xl pl-0">Drink Sizes</h3></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td>12oz</td>
+          <td>16oz</td>
+          <td>20oz</td>
+        </tr>
+        <tr>
+          <td>Small</td>
+          <td>Medium</td>
+          <td>Large</td>
+        </tr>
+        <tr>
+          <td>Hot</td>
+          <td>or</td>
+          <td>Iced</td>
+        </tr>
+      </tbody>
+  </table>
   <!-- Drip Brew -->
-  <div class="grid grid-cols-3 col-span-1 pb-6">
-    <h3 class="text-3xl pl-0 col-span-full">Drip Brew</h3>
-    <p>3.00</p>
-    <p>3.50</p>
-    <p>4.25</p>
-    <p class="col-span-full">8oz Mug</p>
-    <p class="col-span-2">Unlimited</p>
-    <p>3.00</p>
-  </div>
+  <table class="text-left col-span-2 md:col-span-1 mb-6">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-3xl pl-0">Drip Brew</h3></th>
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td>To Go</td>
+          <td>3.00</td>
+          <td>3.50</td>
+          <td>4.25</td>
+        </tr>
+        <tr>
+          <td>8oz mug</td>
+          <td></td>
+          <td>2.30</td>
+        </tr>
+        <tr>
+          <td>Unlimited</td>
+          <td></td>
+          <td>3.00</td>
+        </tr>
+      </tbody>
+  </table>
 </div>
+
 <!-- Menu Grid -->
 <div class="grid grid-cols-1 md:grid-cols-2">
   <div class="menu col-span-full pl-0">
