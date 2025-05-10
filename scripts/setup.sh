@@ -28,6 +28,10 @@ cd .. && npm install
 
 echo "Dependencies installed."
 
+# Run postinstall in the client workspace
+
+npm run postinstall -w client
+
 cd scripts
 
 # Function to detect the platform

@@ -4,17 +4,21 @@
     "main": "index.js",
     "scripts": {
         "dev": "npx vite build --watch",
-        "build": "npx vite build"
+        "build": "npx vite build",
+        "postinstall": "node postinstall.js"
     },
     "author": "",
     "license": "GPL",
     "description": "",
     "type": "module",
     "dependencies": {
+        "@tinymce/tinymce-react": "^6.1.0",
         "buffer": "^6.0.3",
+        "fs-extra": "^11.3.0",
         "pocketbase": "^0.25.1",
         "preact": "^10.26.3",
-        "preact-custom-element": "^4.3.0"
+        "preact-custom-element": "^4.3.0",
+        "tinymce": "^7.8.0"
     },
     "devDependencies": {
         "@preact/preset-vite": "^2.10.1",
