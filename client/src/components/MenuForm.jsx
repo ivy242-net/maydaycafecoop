@@ -45,8 +45,8 @@ function MenuForm({ label }) {
                 <fieldset class="w-full grid grid-cols-3 gap-4">
                     <select class="select select-bordered w-full" onChange={(e) => setMenuType(e.target.value)}>
                         <option value="kitchen">Kitchen</option>
-                        <option value="bar">Drink</option>
-                        <option value="special">Bakery</option>
+                        <option value="drink">Drink</option>
+                        <option value="bakery">Bakery</option>
                     </select>
                 </fieldset>
                 <fieldset class="fieldset border border-base-300 rounded-box w-full aspeect-square">
