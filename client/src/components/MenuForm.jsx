@@ -43,24 +43,11 @@ function MenuForm({ label }) {
             {error && <div>{error}</div>}
             <form onSubmit={(e) => handleSubmit(e)}>
                 <fieldset class="w-full grid grid-cols-3 gap-4">
-                    <div class="relative">
-                        <input class="peer hidden" id="radio_1" type="radio" name="radio" checked />
-                        <label class="flex cursor-pointer flex-col rounded-lg border-4 border-gray-300 p-4 peer-checked:border-4 peer-checked:border-primary" for="radio_1">
-                            <span class="mt-2 text-xl font-bold">Kitchen</span>
-                        </label>
-                    </div>
-                    <div class="relative">
-                        <input class="peer hidden" id="radio_2" type="radio" name="radio" />
-                        <label class="flex cursor-pointer flex-col rounded-lg border-4 border-gray-300 p-4 peer-checked:border-4 peer-checked:border-primary" for="radio_2">
-                            <span class="mt-2 text-xl font-bold">Bakery</span>
-                        </label>
-                    </div>
-                    <div class="relative">
-                        <input class="peer hidden" id="radio_3" type="radio" name="radio" />
-                        <label class="flex cursor-pointer flex-col rounded-lg border-4 border-gray-300 p-4 peer-checked:border-4 peer-checked:bg-primary" for="radio_3">
-                            <span class="mt-2 text-xl font-bold">Drink</span>
-                        </label>
-                        </div>
+                    <select class="select select-bordered w-full" onChange={(e) => setMenuType(e.target.value)}>
+                        <option value="kitchen">Kitchen</option>
+                        <option value="bar">Drink</option>
+                        <option value="special">Bakery</option>
+                    </select>
                 </fieldset>
                 <fieldset class="fieldset border border-base-300 rounded-box w-full aspeect-square">
                     <legend class="fieldset-legend">Upload an image of your special</legend>
