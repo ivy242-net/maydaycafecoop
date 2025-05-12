@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { useState, useEffect } from 'preact/hooks';
+import TinyMCE from './TinyMCE';
 
 function MenuForm({ label }) {
     const [menuType, setMenuType] = useState('kitchen');
@@ -41,35 +42,29 @@ function MenuForm({ label }) {
         <>
             {error && <div>{error}</div>}
             <form onSubmit={(e) => handleSubmit(e)}>
-                <fieldset class="fieldset">
-                    <legend class="fieldset-legend">What kind of special is it?</legend>
-                    <select name="menu-type" class="select" id="menu-type-select" required onChange={(e) => setMenuType(e.target.value)}>
+                <fieldset class="w-full grid grid-cols-3 gap-4">
+                    <select class="select select-bordered w-full" onChange={(e) => setMenuType(e.target.value)}>
                         <option value="kitchen">Kitchen</option>
-                        <option value="bakery">Bakery</option>
                         <option value="drink">Drink</option>
+                        <option value="bakery">Bakery</option>
                     </select>
                 </fieldset>
-
-                <fieldset class="fieldset bg-base-100 border border-base-300 rounded-box w-64">
-                    <legend class="fieldset-legend">Dietary Restrictions</legend>
-                    <label class="fieldset-label">
-                        <input type="checkbox" id="vegan-checkbox" class="checkbox" name="vegan-checkbox" onChange={(e) => setIsVegan(e.srcElement.checked)} />
-                        Vegan?
-                        <input type="checkbox" id="glutenfree-checkbox" class="checkbox" name="glutenfree-checkbox" onChange={(e) => { setIsGlutenFree(e.srcElement.checked)}} />
-                        Gluten Free?
-                    </label>
-                </fieldset>
-
-                <fieldset class="fieldset">
-                    <legend class="fieldset-legend">What's the special?</legend>
-                    <textarea class="textarea h-24" placeholder="A little description about your special" required onChange={(e) => setMenuContent(e.target.value)}></textarea>
-                    <div class="fieldset-label">Required</div>
-                </fieldset>
-
-                <fieldset class="fieldset">
+                <fieldset class="fieldset border border-base-300 rounded-box w-full aspeect-square">
                     <legend class="fieldset-legend">Upload an image of your special</legend>
                     <input type="file" class="file-input" onChange={(e) => setImage(e.target.files[0]) } />
                     <label for="media" class="fieldset-label">Max size 5MB</label>
+                </fieldset>
+
+                <TinyMCE value={menuContent} onChange={(val) => setMenuContent(val)} />
+
+                <fieldset class="fieldset bg-base-100 border border-base-300 rounded-box w-64">
+                    <legend class="fieldset-legend text-lg">Dietary Restrictions</legend>
+                    <label class="fieldset-label text-lg">
+                        <input type="checkbox" id="vegan-checkbox" class="checkbox" name="vegan-checkbox" onChange={(e) => setIsVegan(e.srcElement.checked)} />
+                        <label for="vegan-checkbox">Vegan</label>
+                        <input type="checkbox" id="glutenfree-checkbox" class="checkbox" name="glutenfree-checkbox" onChange={(e) => { setIsGlutenFree(e.srcElement.checked)}} />
+                        <label for="glutenfree-checkbox">Gluten free</label>
+                    </label>
                 </fieldset>
 
                 <button type="submit" class="btn btn-neutral mt-4">Submit</button>
