@@ -6,55 +6,60 @@
   <%- include('specials.ejs') %>
 </div>
 
-<!-- Grid for Tables -->
 <!-- Drinks -->
-<!-- Drip Brew -->
-<table class="text-left col-span-2 row-span-2 mb-6 mr-6">
-  <!-- head -->
+<h2 class="text-6xl pl-0">Menu</h2>
+<h3 class="text-5xl">Drinks</h3>
+<p class="pb-2">Proudly serving Bichota coffee</p>
+<p class="pb-2">Help us reduce waste! While all of our to-go cups are compostable, we encourage you to bring your own mug</p>
+
+<!-- Drink sizes -->
+<table class="table home-menu">
   <thead>
-    <tr>
-      <th><h2 class="text-6xl pl-0">Menu</h2></th>
-    </tr>
-    <tr>
-      <th><h2 class="text-5xl">Drinks</h2></th>
-    </tr>
   </thead>
-    <tbody>
-    <tr>
-      <th class="pb-2">Proudly serving Bichota coffee</th>
-    </tr>
-    <tr>
-      <th class="pb-2">Help us reduce waste! While all of our to-go cups are compostable, we encourage you to bring your own mug</th>
-    </tr>
+  <tbody>
     <tr class="mb-4">
       <th class="text-xl font-bold">Drink Sizes</th>
       <td class="text-lg font-bold">12oz</td>
       <td class="text-lg font-bold">16oz</td>
       <td class="text-lg font-bold">20oz</td>
     </tr>
+  </tbody>
+</table>
+<!-- Drip Brew -->
+<table class="table home-menu">
+  <!-- head -->
+  <thead>
     <tr>
       <th><h3 class="text-3xl pl-0">Drip Brew</h3></th>
     </tr>
+  </thead>
+  <tbody>
       <tr>
-        <td>To Go</td>
+        <th>To Go</th>
         <td>3.00</td>
         <td>3.50</td>
         <td>4.25</td>
       </tr>
       <tr>
-        <td>8oz mug</td>
+        <th>8oz mug</th>
         <td></td>
         <td>2.00</td>
       </tr>
       <tr>
-        <td>Unlimited</td>
+        <th>Unlimited</th>
         <td></td>
         <td>3.00</td>
       </tr>
+      </tbody>
+  
 <!-- Espresso -->
+ <table class="table home-menu">
+  <thead>
     <tr>
       <th><h3 class="text-3xl pl-0">Espresso Bar</h3></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <th>Espresso</th>
       <td>2.75</td>
@@ -135,10 +140,15 @@
     </tr>
     <tr>
       <th>Cortado</th>
-    </tr>
+    </tbody>
+    </table>
+    <table class="table home-menu">
+      <thead>
     <tr>
       <th><h3 class="text-3xl pl-0">Teas and Other Drinks</h3></th>
     </tr>
+    </thead>
+    <tbody>
     <tr>
       <th>Black, Green, and Herbal looseleaf from TeaSource</th>
     </tr>
@@ -155,112 +165,112 @@
 </table>
 
 <h2 class="text-6xl pl-0">Food</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:w-100/100 lg:max-w-340 w-90/100 max-w-360 food-menu">
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Quiche</h3></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Broccoli Cheddar</th>
-      <td>7.50</td>
-    </tr>
-    <tr>
-      <th>Spinach and Ricotta Quiche </th>
-      <td>7.50</td>
-    </tr>
-    <tr>
-      <th>Bacon and Swiss Quiche</th>
-      <td>8.00</td>
-    </tr>
-  </tbody>
-</table>
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Sandwiches</h3></th>
-    </tr>
-    <tr>
-      <th>Breakfast sandwich</th>
-      <td>9.25</td>
-    </tr>
-    <tr>
-      <th>Turkey Provolone Sandwich</th>
-      <td>9.25</td>
-    </tr>
-  </thead>
-  <tbody>
-
-  </tbody>
-</table>
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Rotating flavors</h3></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Pizza</th>
-      <td>6.00</td>
-    </tr>
-    <tr>
-      <th>Topped Focaccia</th>
-    </tr>
-  </tbody>
-</table>
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Seasonal rotating lunches</h3></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Soups</th>
-      <td>5.00</td>
-    </tr>
-    <tr>
-      <th>Deli Salads</th>
-      <td>6.50</td>
-    </tr>
-  </tbody>
-</table>
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Burritos</h3></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Breakfast Burrito</th>
-      <td>7.75</td>
-    </tr>
-    <tr>
-      <th>Black Bean Burrito (❤️ Vegan option available ❤️)</th>
-      <td>7.00</td>
-    </tr>
-  </tbody>
-</table>
-<table class="text-left mb-6 mr-6">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th><h3 class="text-2xl">Everything Else</h3></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Granola</th>
-    </tr>
-  </tbody>
-</table>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:w-100/100 lg:max-w-340 w-90/100 max-w-360">
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Quiche</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Broccoli Cheddar</th>
+        <td>7.50</td>
+      </tr>
+      <tr>
+        <th>Spinach and Ricotta Quiche </th>
+        <td>7.50</td>
+      </tr>
+      <tr>
+        <th>Bacon and Swiss Quiche</th>
+        <td>8.00</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Sandwiches</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Breakfast sandwich</th>
+        <td>9.25</td>
+      </tr>
+      <tr>
+        <th>Turkey Provolone Sandwich</th>
+        <td>9.25</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Rotating flavors</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Pizza</th>
+        <td>6.00</td>
+      </tr>
+      <tr>
+        <th>Topped Focaccia</th>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Seasonal rotating lunches</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Soups</th>
+        <td>5.00</td>
+      </tr>
+      <tr>
+        <th>Deli Salads</th>
+        <td>6.50</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Burritos</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Breakfast Burrito</th>
+        <td>7.75</td>
+      </tr>
+      <tr>
+        <th>Black Bean Burrito (❤️ Vegan option available ❤️)</th>
+        <td>7.00</td>
+      </tr>
+    </tbody>
+  </table>
+  <table class="table home-menu">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th><h3 class="text-2xl">Everything Else</h3></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Granola</th>
+      </tr>
+    </tbody>
+  </table>
 </div>
+</span>

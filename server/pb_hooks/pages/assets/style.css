@@ -9,6 +9,12 @@
     src: url('/assets/fonts/TAYBenditos.woff') format('woff');
 }
 
+@layer components {
+  .table {
+    color: blue;
+  }
+}
+
 :root {
     --color-base-100: #f6e8de;
     --color-base-200: #f6e8de;
@@ -46,7 +52,11 @@ h1, h2, h3, h4, h5, h6, .font-heading {
     font-family: var(--heading-font-family);
 }
 
-.food-menu td {
+.home-menu th {
+    text-align: left;
+}
+
+.home-menu td {
     text-align: right;
 }
   
