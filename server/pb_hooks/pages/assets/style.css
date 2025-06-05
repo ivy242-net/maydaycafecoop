@@ -16,8 +16,9 @@
         border: none;
     }
 
-    & :where(th) {
+    & :where(th, td) {
         padding-inline: 0;
+        padding-block: 0.50rem;
      }
 
     & :where(thead, tfoot) {
