@@ -16,6 +16,10 @@
         border: none;
     }
 
+     & :where(th) {
+        padding-inline: 0;
+     }
+
     & :where(thead, tfoot) {
         color: var(--color-base-content);
     }
