@@ -9,9 +9,16 @@
     src: url('/assets/fonts/TAYBenditos.woff') format('woff');
 }
 
-@layer components {
+/* Table class overrides that don't fit our theme */
+@layer component {
   .table {
-    color: blue;
+    & :where(thead tr, tbody tr:not(:last-child)) {
+        border: none;
+    }
+
+    & :where(thead, tfoot) {
+        color: var(--color-base-content);
+    }
   }
 }
 
