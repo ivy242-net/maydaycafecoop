@@ -16,7 +16,7 @@
         border: none;
     }
 
-     & :where(th) {
+    & :where(th) {
         padding-inline: 0;
      }
 
