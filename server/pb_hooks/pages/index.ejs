@@ -6,26 +6,124 @@
   <%- include('specials.ejs') %>
 </div>
 
-<!-- Drinks -->
 <h1 class="text-8xl pl-0">Menu</h1>
+
+<!-- Drinks -->
 <h3 class="text-5xl">Drinks</h3>
 <p>Proudly serving Bichota coffee</p>
 <p class="pb-2">Help us reduce waste! While all of our to-go cups are compostable, we encourage you to bring your own mug</p>
 
-<!-- Drip Brew -->
-<table class="table mb-6 home-menu table-fixed md:table-auto">
-  <!-- head -->
-  <thead>
-    <tr>
-      <th class="w-1/2 md:w-3/5">
-        <h4 class="text-3xl pl-0">Drip Brew</h4>
-      </th>
-      <td class="text-md font-bold">12oz</td>
-      <td class="text-md font-bold">16oz</td>
-      <td class="text-md font-bold">20oz</td>
-    </tr>
-  </thead>
-  <tbody>
+<div class="grid gap-x-22 grid-cols-1 mt-10 md:grid-cols-2 md:items-start w-100/100">
+  <!-- Espresso -->
+  <table class="table mb-10 home-menu table-fixed md:table-auto md:row-span-2">
+    <thead>
+      <tr>
+        <th class="w-1/2 md:w-2/5">
+          <h4 class="text-3xl pl-0">Espresso</h4>
+        </th>
+        <td class="text-md font-bold">12oz</td>
+        <td class="text-md font-bold">16oz</td>
+        <td class="text-md font-bold">20oz</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>Espresso</th>
+        <td>2.75</td>
+        <td>3.25</td>
+        <td>3.75</td>
+      </tr>
+      <tr>
+        <th>Americano</th>
+        <td>2.75</td>
+        <td>3.25</td>
+        <td>3.75</td>
+      </tr>
+      <tr>
+        <th>Depth Charge</th>
+        <td>3.50</td>
+        <td>4.00</td>
+        <td>4.00</td>
+      </tr>
+      <tr>
+        <th>Cappucino</th>
+        <td>4.25</td>
+        <td>4.75</td>
+        <td>5.25</td>
+      </tr>
+      <tr>
+        <th>Latte</th>
+        <td>4.00</td>
+        <td>4.25</td>
+        <td>4.75</td>
+      </tr>
+      <tr>
+        <th>Breve</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Mocha</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Caramel Latte</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Miel</th>
+        <td>4.25</td>
+        <td>4.75</td>
+        <td>5.25</td>
+      </tr>
+      <tr>
+        <th>Vietnamese</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Chai Tea</th>
+        <td>4.50</td>
+        <td>4.25</td>
+        <td>4.75</td>
+      </tr>
+      <tr>
+        <th>Cold Press</th>
+        <td>4.50</td>
+        <td>5.00</td>
+        <td>5.50</td>
+      </tr>
+      <tr>
+        <th>Hot Chocolate / Steamer</th>
+        <td>3.00</td>
+        <td>3.50</td>
+        <td>4.00</td>
+      </tr>
+      <tr>
+        <th>Cortado</th>
+    </tbody>
+  </table>
+
+  <!-- Drip Brew -->
+  <table class="table mb-10 home-menu table-fixed md:table-auto">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th class="w-1/2 md:w-2/5">
+          <h4 class="text-3xl pl-0">Drip Brew</h4>
+        </th>
+        <td class="text-md font-bold">12oz</td>
+        <td class="text-md font-bold">16oz</td>
+        <td class="text-md font-bold">20oz</td>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <th>To Go</th>
         <td>3.00</td>
@@ -42,126 +140,34 @@
         <td></td>
         <td>3.00</td>
       </tr>
-      </tbody>
-  
-<!-- Espresso -->
- <table class="table mb-6 home-menu table-fixed md:table-auto">
-  <thead>
-    <tr>
-      <th class="w-1/2 md:w-3/5">
-        <h4 class="text-3xl pl-0">Espresso</h4>
-      </th>
-      <td class="text-md font-bold">12oz</td>
-      <td class="text-md font-bold">16oz</td>
-      <td class="text-md font-bold">20oz</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Espresso</th>
-      <td>2.75</td>
-      <td>3.25</td>
-      <td>3.75</td>
-    </tr>
-    <tr>
-      <th>Americano</th>
-      <td>2.75</td>
-      <td>3.25</td>
-      <td>3.75</td>
-    </tr>
-    <tr>
-      <th>Depth Charge</th>
-      <td>3.50</td>
-      <td>4.00</td>
-      <td>4.00</td>
-    </tr>
-    <tr>
-      <th>Cappucino</th>
-      <td>4.25</td>
-      <td>4.75</td>
-      <td>5.25</td>
-    </tr>
-    <tr>
-      <th>Latte</th>
-      <td>4.00</td>
-      <td>4.25</td>
-      <td>4.75</td>
-    </tr>
-    <tr>
-      <th>Breve</th>
-      <td>4.50</td>
-      <td>5.00</td>
-      <td>5.50</td>
-    </tr>
-    <tr>
-      <th>Mocha</th>
-      <td>4.50</td>
-      <td>5.00</td>
-      <td>5.50</td>
-    </tr>
-    <tr>
-      <th>Caramel Latte</th>
-      <td>4.50</td>
-      <td>5.00</td>
-      <td>5.50</td>
-    </tr>
-    <tr>
-      <th>Miel</th>
-      <td>4.25</td>
-      <td>4.75</td>
-      <td>5.25</td>
-    </tr>
-    <tr>
-      <th>Vietnamese</th>
-      <td>4.50</td>
-      <td>5.00</td>
-      <td>5.50</td>
-    </tr>
-    <tr>
-      <th>Chai Tea</th>
-      <td>4.50</td>
-      <td>4.25</td>
-      <td>4.75</td>
-    </tr>
-    <tr>
-      <th>Cold Press</th>
-      <td>4.50</td>
-      <td>5.00</td>
-      <td>5.50</td>
-    </tr>
-    <tr>
-      <th>Hot Chocolate / Steamer</th>
-      <td>3.00</td>
-      <td>3.50</td>
-      <td>4.00</td>
-    </tr>
-    <tr>
-      <th>Cortado</th>
     </tbody>
-    </table>
-    <table class="table mb-6 home-menu table-fixed md:table-auto">
-      <thead>
-        <tr>
-          <th class="w-1/2 md:w-3/5">
-            <h3 class="text-3xl pl-0">Teas and Other Drinks</h3>
-          </th>
-        </tr>
+  </table>
+
+  <!-- Teas and other drinks -->
+  <table class="table mb-10 self-end home-menu table-fixed md:table-auto">
+    <thead>
+      <tr>
+        <th class="w-1/2 md:w-2/5">
+          <h3 class="text-3xl pl-0">Teas and Other Drinks</h3>
+        </th>
+      </tr>
     </thead>
     <tbody>
-    <tr>
-      <th>Black, Green, and Herbal looseleaf from TeaSource</th>
-    </tr>
-    <tr>
-      <th>Chai</th>
-    </tr>
-    <tr>
-      <th>Lemonade (with seasonal varieties)</th>
-    </tr>
-    <tr>
-      <th>Hot Chocolate / Steamer</th>
-    </tr>
+      <tr>
+        <th>Black, Green, and Herbal looseleaf from TeaSource</th>
+      </tr>
+      <tr>
+        <th>Chai</th>
+      </tr>
+      <tr>
+        <th>Lemonade (with seasonal varieties)</th>
+      </tr>
+      <tr>
+        <th>Hot Chocolate / Steamer</th>
+      </tr>
     </tbody>
-</table>
+  </table>
+</div>
 
 <h3 class="text-5xl pl-0">Food</h3>
 <div class="grid gap-x-22 grid-cols-1 md:grid-cols-2 w-100/100">
