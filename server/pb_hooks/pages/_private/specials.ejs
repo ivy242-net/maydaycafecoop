@@ -59,38 +59,65 @@
 
 %>
 
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-1/1">
+<div class="carousel flex gap-4 pb-8 md:justify-center w-1/1">
 
     <% if (kitchenSpecial) { %>
-        <div class="flex flex-col lg:-translate-y-5 lg:-translate-x-2">
+        <div class="carousel-item w-4/5 md:w-1/3 lg:w-1/5 flex flex-col">
             <% if (getMediaURL(kitchenSpecial)) { %>
-                <img src="<%= getMediaURL(kitchenSpecial) %>" alt="Kitchen Special" class="w-1/1 aspect-1/1 object-cover rounded-box shadow lg:-rotate-2">
+                <figure>
+                <img src="<%= getMediaURL(kitchenSpecial) %>" alt="Kitchen Special" class="w-1/1 aspect-1/1 object-cover rounded-box shadow lg:rotate-1">
+                </figure>
             <% } %>
-            <div class="px-4 py-6 text-xl">
-                <%- kitchenSpecial.get('content') %>
+            <h2 class="pt-2 pb-2 text-xl">Kitchen Special</h2>
+            <div class="pb-2">
+                <% if (kitchenSpecial.get('is_vegan')) { %>
+                    <span class="text-xs">Ⓥ Vegan</span>
+                <% } %>
+                <% if (kitchenSpecial.get('is_glutenfree')) { %>
+                    <span class="text-xs">Gluten Free</span>
+                <% } %>
             </div>
+            <%- kitchenSpecial.get('content') %>
         </div>
     <% } %>
 
     <% if (bakerySpecial) { %>
-        <div class="flex flex-col">
+        <div class="carousel-item w-4/5 md:w-1/3 lg:w-1/5 flex flex-col">
             <% if (getMediaURL(bakerySpecial)) { %>
+                <figure>
                 <img src="<%= getMediaURL(bakerySpecial) %>" alt="Bakery Special" class="w-1/1 aspect-1/1 object-cover rounded-box shadow lg:rotate-1">
+                </figure>
             <% } %>
-            <div class="px-4 py-6 text-xl">
-                <%- bakerySpecial.get('content') %>
+            <h2 class="pt-2 pb-2 text-xl">Bakery Special</h2>
+            <div class="pb-2">
+                <% if (bakerySpecial.get('is_vegan')) { %>
+                    <span class="text-xs">Ⓥ Vegan</span>
+                <% } %>
+                <% if (bakerySpecial.get('is_glutenfree')) { %>
+                    <span class="text-xs">Gluten Free</span>
+                <% } %>
             </div>
+            <%- bakerySpecial.get('content') %>
         </div>
     <% } %>
 
     <% if (drinkSpecial) { %>
-        <div class="flex flex-col lg:-translate-x-1 lg:-translate-y-3">
+        <div class="carousel-item w-4/5 md:w-1/3 lg:w-1/5 flex flex-col">
             <% if (getMediaURL(drinkSpecial)) { %>
-                <img src="<%= getMediaURL(drinkSpecial) %>" alt="Drink Special" class="w-1/1 aspect-1/1 object-cover rounded-box shadow lg:-rotate-1">
+                <figure>
+                <img src="<%= getMediaURL(drinkSpecial) %>" alt="Drink Special" class="w-1/1 aspect-1/1 object-cover rounded-box shadow lg:rotate-1">
+                </figure>
             <% } %>
-            <div class="px-4 py-6 text-xl">
-                <%- drinkSpecial.get('content') %>
+            <h2 class="pt-2 pb-2 text-xl">Drink Special</h2>
+            <div class="pb-2">
+                <% if (drinkSpecial.get('is_vegan')) { %>
+                    <span class="text-xs">Ⓥ Vegan</span>
+                <% } %>
+                <% if (drinkSpecial.get('is_glutenfree')) { %>
+                    <span class="text-xs">Gluten Free</span>
+                <% } %>
             </div>
+            <%- drinkSpecial.get('content') %>
         </div>
     <% } %>
 
