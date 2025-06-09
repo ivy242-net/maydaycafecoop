@@ -1,4 +1,10 @@
-<h2 class="text-3xl md:text-6xl text-center mt-10">Open 7 Days a week - 7:00AM to 4:30PM</h2>
+<h2 class="text-3xl md:text-6xl text-center mt-10 text-shadow-(--mayday-shadow)">
+  <div class="flex flex-col lg:flex-row lg:items-center lg:justify-center lg:gap-4">
+    <span>Open 7 Days a week</span>
+    <span class="hidden lg:block">-</span>
+    <span>7:00AM to 4:30PM</span>
+  </div>
+</h2>
 <div class="md:divider my-12">
   <div class="text-2xl font-heading md:text-4xl">Try our weekly specials!</div>
 </div>
@@ -6,288 +12,291 @@
   <%- include('specials.ejs') %>
 </div>
 
-<h1 class="text-8xl pl-0">Menu</h1>
-
-<!-- Drinks -->
-<h3 class="text-5xl">Drinks</h3>
-<p>Proudly serving Bichota coffee</p>
-<p class="pb-2">Help us reduce waste! While all of our to-go cups are compostable, we encourage you to bring your own mug</p>
-
-<div class="grid gap-x-22 grid-cols-1 mt-10 md:grid-cols-2 md:items-start w-100/100">
-  <!-- Espresso -->
-  <table class="table mb-10 home-menu table-fixed md:table-auto md:row-span-2">
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-2/5">
-          <h4 class="text-3xl pl-0">Espresso</h4>
-        </th>
-        <td class="text-md font-bold">12oz</td>
-        <td class="text-md font-bold">16oz</td>
-        <td class="text-md font-bold">20oz</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Espresso</th>
-        <td>2.75</td>
-        <td>3.25</td>
-        <td>3.75</td>
-      </tr>
-      <tr>
-        <th>Americano</th>
-        <td>2.75</td>
-        <td>3.25</td>
-        <td>3.75</td>
-      </tr>
-      <tr>
-        <th>Depth Charge</th>
-        <td>3.50</td>
-        <td>4.00</td>
-        <td>4.00</td>
-      </tr>
-      <tr>
-        <th>Cappucino</th>
-        <td>4.25</td>
-        <td>4.75</td>
-        <td>5.25</td>
-      </tr>
-      <tr>
-        <th>Latte</th>
-        <td>4.00</td>
-        <td>4.25</td>
-        <td>4.75</td>
-      </tr>
-      <tr>
-        <th>Breve</th>
-        <td>4.50</td>
-        <td>5.00</td>
-        <td>5.50</td>
-      </tr>
-      <tr>
-        <th>Mocha</th>
-        <td>4.50</td>
-        <td>5.00</td>
-        <td>5.50</td>
-      </tr>
-      <tr>
-        <th>Caramel Latte</th>
-        <td>4.50</td>
-        <td>5.00</td>
-        <td>5.50</td>
-      </tr>
-      <tr>
-        <th>Miel</th>
-        <td>4.25</td>
-        <td>4.75</td>
-        <td>5.25</td>
-      </tr>
-      <tr>
-        <th>Vietnamese</th>
-        <td>4.50</td>
-        <td>5.00</td>
-        <td>5.50</td>
-      </tr>
-      <tr>
-        <th>Chai Tea</th>
-        <td>4.50</td>
-        <td>4.25</td>
-        <td>4.75</td>
-      </tr>
-      <tr>
-        <th>Cold Press</th>
-        <td>4.50</td>
-        <td>5.00</td>
-        <td>5.50</td>
-      </tr>
-      <tr>
-        <th>Hot Chocolate / Steamer</th>
-        <td>3.00</td>
-        <td>3.50</td>
-        <td>4.00</td>
-      </tr>
-      <tr>
-        <th>Cortado</th>
-    </tbody>
-  </table>
-
-  <!-- Drip Brew -->
-  <table class="table mb-10 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-2/5">
-          <h4 class="text-3xl pl-0">Drip Brew</h4>
-        </th>
-        <td class="text-md font-bold">12oz</td>
-        <td class="text-md font-bold">16oz</td>
-        <td class="text-md font-bold">20oz</td>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>To Go</th>
-        <td>3.00</td>
-        <td>3.50</td>
-        <td>4.25</td>
-      </tr>
-      <tr>
-        <th>8oz mug</th>
-        <td></td>
-        <td>2.00</td>
-      </tr>
-      <tr>
-        <th>Unlimited</th>
-        <td></td>
-        <td>3.00</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <!-- Teas and other drinks -->
-  <table class="table mb-10 self-end home-menu table-fixed md:table-auto">
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-2/5">
-          <h3 class="text-3xl pl-0">Teas and Other Drinks</h3>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Black, Green, and Herbal looseleaf from TeaSource</th>
-      </tr>
-      <tr>
-        <th>Chai</th>
-      </tr>
-      <tr>
-        <th>Lemonade (with seasonal varieties)</th>
-      </tr>
-      <tr>
-        <th>Hot Chocolate / Steamer</th>
-      </tr>
-    </tbody>
-  </table>
+<div class="md:divider my-12">
+  <h1 class="text-2xl font-heading md:text-4xl">Menu</h1>
 </div>
 
-<h3 class="text-5xl pl-0">Food</h3>
-<div class="grid gap-x-22 grid-cols-1 md:grid-cols-2 w-100/100">
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Quiche</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Broccoli Cheddar</th>
-        <td>7.50</td>
-      </tr>
-      <tr>
-        <th>Spinach and Ricotta Quiche </th>
-        <td>7.50</td>
-      </tr>
-      <tr>
-        <th>Bacon and Swiss Quiche</th>
-        <td>8.00</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Sandwiches</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Breakfast sandwich</th>
-        <td>9.25</td>
-      </tr>
-      <tr>
-        <th>Turkey Provolone Sandwich</th>
-        <td>9.25</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Rotating flavors</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Pizza</th>
-        <td>6.00</td>
-      </tr>
-      <tr>
-        <th>Topped Focaccia</th>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Seasonal rotating lunches</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Soups</th>
-        <td>5.00</td>
-      </tr>
-      <tr>
-        <th>Deli Salads</th>
-        <td>6.50</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Burritos</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Breakfast Burrito</th>
-        <td>7.75</td>
-      </tr>
-      <tr>
-        <th>Black Bean Burrito (❤️ Vegan option available ❤️)</th>
-        <td>7.00</td>
-      </tr>
-    </tbody>
-  </table>
-  <table class="table mb-6 home-menu table-fixed md:table-auto">
-    <!-- head -->
-    <thead>
-      <tr>
-        <th class="w-1/2 md:w-3/5">
-          <h4 class="text-2xl">Everything Else</h4>
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>Granola</th>
-      </tr>
-    </tbody>
-  </table>
+<div class="w-1/1 lg:w-85/100 lg:max-w-340 w-90/100 max-w-360 md:m-auto">
+  <!-- Drinks -->
+  <h3 class="text-5xl">Drinks</h3>
+  <p>Proudly serving Bichota coffee</p>
+  <p class="pb-2">Help us reduce waste! While all of our to-go cups are compostable, we encourage you to bring your own mug</p>
+
+  <div class="grid gap-x-22 grid-cols-1 mt-10 md:grid-cols-2 md:items-start w-100/100">
+    <!-- Espresso -->
+    <table class="table mb-10 home-menu table-fixed md:table-auto md:row-span-2 text-lg">
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-2/5">
+            <h4 class="text-3xl pl-0">Espresso</h4>
+          </th>
+          <td class="text-md font-bold">12oz</td>
+          <td class="text-md font-bold">16oz</td>
+          <td class="text-md font-bold">20oz</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Espresso</th>
+          <td>2.75</td>
+          <td>3.25</td>
+          <td>3.75</td>
+        </tr>
+        <tr>
+          <th>Americano</th>
+          <td>2.75</td>
+          <td>3.25</td>
+          <td>3.75</td>
+        </tr>
+        <tr>
+          <th>Depth Charge</th>
+          <td>3.50</td>
+          <td>4.00</td>
+          <td>4.00</td>
+        </tr>
+        <tr>
+          <th>Cappucino</th>
+          <td>4.25</td>
+          <td>4.75</td>
+          <td>5.25</td>
+        </tr>
+        <tr>
+          <th>Latte</th>
+          <td>4.00</td>
+          <td>4.25</td>
+          <td>4.75</td>
+        </tr>
+        <tr>
+          <th>Breve</th>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>5.50</td>
+        </tr>
+        <tr>
+          <th>Mocha</th>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>5.50</td>
+        </tr>
+        <tr>
+          <th>Caramel Latte</th>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>5.50</td>
+        </tr>
+        <tr>
+          <th>Miel</th>
+          <td>4.25</td>
+          <td>4.75</td>
+          <td>5.25</td>
+        </tr>
+        <tr>
+          <th>Vietnamese</th>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>5.50</td>
+        </tr>
+        <tr>
+          <th>Chai Tea</th>
+          <td>4.50</td>
+          <td>4.25</td>
+          <td>4.75</td>
+        </tr>
+        <tr>
+          <th>Cold Press</th>
+          <td>4.50</td>
+          <td>5.00</td>
+          <td>5.50</td>
+        </tr>
+        <tr>
+          <th>Hot Chocolate / Steamer</th>
+          <td>3.00</td>
+          <td>3.50</td>
+          <td>4.00</td>
+        </tr>
+        <tr>
+          <th>Cortado</th>
+      </tbody>
+    </table>
+
+    <!-- Drip Brew -->
+    <table class="table mb-10 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-2/5">
+            <h4 class="text-3xl pl-0">Drip Brew</h4>
+          </th>
+          <td class="text-md font-bold">12oz</td>
+          <td class="text-md font-bold">16oz</td>
+          <td class="text-md font-bold">20oz</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>To Go</th>
+          <td>3.00</td>
+          <td>3.50</td>
+          <td>4.25</td>
+        </tr>
+        <tr>
+          <th>8oz mug</th>
+          <td></td>
+          <td>2.00</td>
+        </tr>
+        <tr>
+          <th>Unlimited</th>
+          <td></td>
+          <td>3.00</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Teas and other drinks -->
+    <table class="table mb-10 self-end home-menu table-fixed md:table-auto text-lg">
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-2/5">
+            <h3 class="text-3xl pl-0">Teas and Other Drinks</h3>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Black, Green, and Herbal looseleaf from TeaSource</th>
+        </tr>
+        <tr>
+          <th>Chai</th>
+        </tr>
+        <tr>
+          <th>Lemonade (with seasonal varieties)</th>
+        </tr>
+        <tr>
+          <th>Hot Chocolate / Steamer</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 class="text-5xl pl-0">Food</h3>
+  <div class="grid gap-x-22 grid-cols-1 md:grid-cols-2 w-100/100">
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Quiche</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Broccoli Cheddar</th>
+          <td>7.50</td>
+        </tr>
+        <tr>
+          <th>Spinach and Ricotta Quiche </th>
+          <td>7.50</td>
+        </tr>
+        <tr>
+          <th>Bacon and Swiss Quiche</th>
+          <td>8.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Sandwiches</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Breakfast sandwich</th>
+          <td>9.25</td>
+        </tr>
+        <tr>
+          <th>Turkey Provolone Sandwich</th>
+          <td>9.25</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Rotating flavors</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Pizza</th>
+          <td>6.00</td>
+        </tr>
+        <tr>
+          <th>Topped Focaccia</th>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Seasonal rotating lunches</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Soups</th>
+          <td>5.00</td>
+        </tr>
+        <tr>
+          <th>Deli Salads</th>
+          <td>6.50</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Burritos</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Breakfast Burrito</th>
+          <td>7.75</td>
+        </tr>
+        <tr>
+          <th>Black Bean Burrito (❤️ Vegan option available ❤️)</th>
+          <td>7.00</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table mb-6 home-menu table-fixed md:table-auto text-lg">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class="w-1/2 md:w-3/5">
+            <h4 class="text-3xl">Everything Else</h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>Granola</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
-</span>

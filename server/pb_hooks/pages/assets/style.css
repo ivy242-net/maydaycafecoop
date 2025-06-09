@@ -58,6 +58,7 @@
     --noise: 0;
     --font-sans: 'Poppins', sans-serif;
     --heading-font-family: 'Benditos', sans-serif;
+    --mayday-shadow: 0.3rem 0.3rem 0rem rgba(204, 51, 0, 0.24);
 }
 
 h1, h2, h3, h4, h5, h6, .font-heading {
